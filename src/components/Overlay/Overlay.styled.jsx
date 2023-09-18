@@ -1,5 +1,3 @@
-import { ModalOverlay } from './Overlay.styled';
-
 import styled from 'styled-components';
 
 export const ModalOverlay = styled.div`

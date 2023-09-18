@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CarRentalApp/static/css/main.7acaea2f.css",
-    "main.js": "/CarRentalApp/static/js/main.07d3183d.js",
+    "main.css": "/CarRentalApp/static/css/main.7cda0caf.css",
+    "main.js": "/CarRentalApp/static/js/main.1f8c1096.js",
     "index.html": "/CarRentalApp/index.html",
-    "main.7acaea2f.css.map": "/CarRentalApp/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/CarRentalApp/static/js/main.07d3183d.js.map"
+    "main.7cda0caf.css.map": "/CarRentalApp/static/css/main.7cda0caf.css.map",
+    "main.1f8c1096.js.map": "/CarRentalApp/static/js/main.1f8c1096.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.7cda0caf.css",
+    "static/js/main.1f8c1096.js"
   ]
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Hero from "../../components/Hero/Hero";
 
 const Container = styled.div`
-  background-color: #f2f2f2;
+  background-color: white;
   padding: 0px 180px;
 `;
 

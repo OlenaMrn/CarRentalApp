@@ -40,22 +40,7 @@ const SNavLink = styled(NavLink)`
   &.active {
     position: relative;
     color: #D11818;
-    /* svg {
-      fill: #2c59ec;
-      path {
-        stroke: #2c59ec;
-      }
-    } */
-    /* &::after {
-      content: '';
-      width: 100%;
-      height: 2px;
-      position: absolute;
-      background-color: #2c59ec;
-      bottom: 0;
-      left: 0;
-      transform: translateY(10px);
-    } */
+  
   }
 
   

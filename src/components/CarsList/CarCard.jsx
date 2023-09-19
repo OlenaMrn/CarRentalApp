@@ -1,20 +1,23 @@
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavorite, removeFavorite } from '../../redux/cars/carsSlice';
+import { favoriteSelector } from '../../redux/cars/carsSelectors';
+import CarModal from '../CarModal/CarModal';
 import { createAddressObject, reduceFunctionalitiesArr } from './carHelpers';
 import {
   CarListItem,
   CardHead,
   DescBox,
-  Fav,
+  FullHeart,
   SList,
-  UnFav,
+  EmptyHeart,
 } from './CarsList.styled';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite, removeFavorite } from '../../redux/cars/carsSlice';
-import { favoriteSelector } from '../../redux/cars/carsSelectors';
 
 const CarCard = ({ data }) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
   const {
     img,
     type,
@@ -28,10 +31,16 @@ const CarCard = ({ data }) => {
     functionalities,
     address,
   } = data;
+
   const { city, country } = createAddressObject(address);
   const dispatch = useDispatch();
-  const handleClick = e => {
-    if (e.target.id === 'unFav') {
+
+  const toggleModal = () => {
+    setShowModal(!showModal); 
+  };
+
+  const handleClick = () => {
+    if (!isFavorite) {
       setIsFavorite(true);
       dispatch(addFavorite(data));
     } else {
@@ -39,24 +48,27 @@ const CarCard = ({ data }) => {
       dispatch(removeFavorite(data.id));
     }
   };
+
   const favorite = useSelector(favoriteSelector);
+
   useEffect(() => {
-    const isFavorite = favorite.some(fav => fav.id === data.id);
-    setIsFavorite(isFavorite);
+    const isCarFavorite = favorite.some(fav => fav.id === data.id);
+    setIsFavorite(isCarFavorite);
   }, [favorite, data]);
+
   return (
     <CarListItem>
       {!isFavorite ? (
-        <UnFav id="unFav" size={18} onClick={handleClick} />
+        <EmptyHeart size={18} onClick={handleClick} />
       ) : (
-        <Fav id="fav" size={18} onClick={handleClick} />
+        <FullHeart size={18} onClick={handleClick} />
       )}
       {img ? <img src={img} alt={make} /> : <img src={photoLink} alt={make} />}
       <DescBox>
         <CardHead>
           <div>
             <p className="make">{make}</p>
-            <p className="model"> {model && model}</p>
+            <p className="model">{model && model}</p>
             <p>,</p>
             <p className="year">{year}</p>
           </div>
@@ -71,8 +83,11 @@ const CarCard = ({ data }) => {
           <li>{id}</li>
           <li>{reduceFunctionalitiesArr(functionalities)}</li>
         </SList>
-        <button>Learn more</button>
+        <button onClick={toggleModal}>Learn more</button>
       </DescBox>
+
+      
+      {showModal && <CarModal toggleModal={toggleModal} car={data} />}
     </CarListItem>
   );
 };

@@ -10,10 +10,6 @@ import {
 } from './Header.styled';
 
 import Logotype from '../../img/logo.png';
-// import { useLocation } from 'react-router-dom';
-// import { useState } from 'react';
-
-
 
 const Header = () => {
   

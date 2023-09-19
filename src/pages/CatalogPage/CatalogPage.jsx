@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import Filters from '../../components/Filtres/Filtres'; // Припускаю, що назва компонента правильна
+
+import Filters from '../../components/Filtres/Filtres';
 import CarsList from '../../components/CarsList/CarsList';
-import Button from './CatalogPage.styled';
+import {Button, Container} from './CatalogPage.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCars } from '../../redux/cars/carsOperations';
-
-import {carsSelector} from '../../redux/cars/carsSelectors';
-
-const Container = styled.div`
-  background-color: white;
-  padding: 0px 80px;
-  
-`;
+import { carsSelector } from '../../redux/cars/carsSelectors';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -40,5 +33,3 @@ const CatalogPage = () => {
 };
 
 export default CatalogPage;
-
-

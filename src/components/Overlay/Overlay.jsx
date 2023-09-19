@@ -1,7 +1,8 @@
+import React from 'react';
 import { ModalOverlay } from './Overlay.styled';
 
-const Overlay = ({ children }) => {
-  return <ModalOverlay>{children}</ModalOverlay>;
+const Overlay = ({ children, onClick }) => {
+  return <ModalOverlay onClick={onClick}>{children}</ModalOverlay>;
 };
 
 export default Overlay;

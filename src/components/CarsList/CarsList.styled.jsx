@@ -9,7 +9,7 @@ const CardList = styled.ul`
   justify-content: center;
 `;
 
-const UnFav = styled(AiOutlineHeart)`
+const EmptyHeart = styled(AiOutlineHeart)`
   position: absolute;
   right: 14px;
   cursor: pointer;
@@ -21,7 +21,7 @@ const UnFav = styled(AiOutlineHeart)`
     fill: #0b44cd;
   }
 `;
-const Fav = styled(AiFillHeart)`
+const FullHeart = styled(AiFillHeart)`
   position: absolute;
   right: 14px;
   top: 14px;
@@ -39,6 +39,8 @@ const CarListItem = styled.li`
   img {
     height: 268px;
     border-radius: 12px;
+    object-fit:cover;
+    aspect-ratio: 1/ 0.978;
   }
 
   button {
@@ -116,4 +118,12 @@ const SList = styled.ul`
     }
   }
 `;
-export { CarListItem, CardHead, DescBox, SList, CardList, UnFav, Fav };
+export {
+  CarListItem,
+  CardHead,
+  DescBox,
+  SList,
+  CardList,
+  EmptyHeart,
+  FullHeart,
+};

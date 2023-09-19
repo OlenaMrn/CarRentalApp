@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+const Container = styled.div`
+  background-color: white;
+  padding: 0px 80px;
+  align-items: center;
+`;
+
 const Button = styled.button`
   background-color: white;
   color: #3470ff;
@@ -9,6 +15,8 @@ const Button = styled.button`
   padding: 10px 20px;
   text-decoration: underline;
   margin: 0 auto;
+  margin-top: 100px;
+  display: block;
 
   cursor: pointer;
 
@@ -20,4 +28,4 @@ const Button = styled.button`
   }
 `;
 
-export default Button;
+export  {Button, Container};

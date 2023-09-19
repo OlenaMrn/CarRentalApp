@@ -3,4 +3,6 @@ export const initialState = {
   isLoading: false,
   error: '',
   favoriteCars: [],
+  currentPage: 1, 
+  carsPerPage: 8,
 };

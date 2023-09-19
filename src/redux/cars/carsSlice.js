@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
 import { fetchCars } from './carsOperations';
 
-// Define the handle functions here
+
 const handlePending = state => {
   state.isLoading = true;
 };

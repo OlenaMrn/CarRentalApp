@@ -1,1 +1,2 @@
-export const getStatusFilter = state => state.filters.status;
+export const filteredSelector = state => state.cars.filteredCars;
+export const isFilteredSelector = state => state.cars.isFiltered;

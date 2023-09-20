@@ -3,6 +3,7 @@ export const initialState = {
   isLoading: false,
   error: '',
   favoriteCars: [],
-  currentPage: 1, 
-  carsPerPage: 8,
+  filteredCars: [],
+  isFiltered: false,
+  currentItems: 8,
 };

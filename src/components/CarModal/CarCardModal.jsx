@@ -40,7 +40,7 @@ const CarCardModal = ({ car, toggleModal }) => {
     functionalities,
     rentalConditions,
   } = car;
-
+const phoneNumber = '+380730000000';
 const { city, country } = createAddressObject(address);
 
     
@@ -89,11 +89,9 @@ const { city, country } = createAddressObject(address);
         <ConditionWrapper>
           <FontSpan>Price:</FontSpan>
           <ColorSpan>{rentalPrice}</ColorSpan>
-              </ConditionWrapper>
-              <Button href="tel:+380730000000">Go Rent Car</Button>
+        </ConditionWrapper>
+        <Button href={`tel:${phoneNumber}`}>Go Rent Car</Button>
       </Wrapper>
-
-      
     </>
   );
 }

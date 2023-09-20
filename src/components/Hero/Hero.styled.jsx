@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 
 const ImageWrap = styled.div``;
 
-const Button = styled.a`
+const Button = styled.button`
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;

@@ -6,7 +6,7 @@ The GoRent Car application is a mobile app designed for ease of use, enabling us
 
 
 
-![step 1](./assets/screenHero.png)
+![step 1](./assets/ScreenHero.png)
 
 
 The application consists of four main pages, which can be accessed through React Router: Home, Catalogue, Favorites, and NotFoundPage.

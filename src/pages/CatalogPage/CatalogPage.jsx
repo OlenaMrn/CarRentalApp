@@ -14,8 +14,9 @@ import {
 const CatalogPage = () => {
   const dispatch = useDispatch();
 
-  const [carsPerPage, setCarsPerPage] = useState(8);
-
+  const [carsPerPage] = useState(8);
+  
+  
   const cars = useSelector(carsSelector);
   const [currentPage, setCurrentPage] = useState(1);
 

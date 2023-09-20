@@ -1,10 +1,10 @@
-Search, book and rent your dream car easily
+#Search, book and rent your dream car easily
 
 
 
-The GoRent Car application is a mobile app designed for ease of use, enabling users to effortlessly peruse and reserve rental vehicles using their smartphones. These applications offer a smooth platform for selecting car choices, specifying rental dates, and even arranging pick-up and drop-off spots. With features like instant access to vehicle availability and digital payment methods, rental car apps streamline the car rental process, catering to the needs of travelers on the move.
+<p>The GoRent Car application is a mobile app designed for ease of use, enabling users to effortlessly peruse and reserve rental vehicles using their smartphones. These applications offer a smooth platform for selecting car choices, specifying rental dates, and even arranging pick-up and drop-off spots. With features like instant access to vehicle availability and digital payment methods, rental car apps streamline the car rental process, catering to the needs of travelers on the move.
 
-![home](./assets/ScreenHero.png)
+![Illustration GoRent Car](./assets/ScreenHero.png)<br/>
 
 
 
@@ -23,4 +23,4 @@ The application consists of four main pages, which can be accessed through React
 GoRent Car Button: the button enables users to contact our company directly via the phone number +380730000000. It's a convenient way to initiate the rental process or ask any questions.
 
 
-We hope this structure and functionality enhance customer experience with car rental service.
+We hope this structure and functionality enhance customer experience with car rental service.</p>
